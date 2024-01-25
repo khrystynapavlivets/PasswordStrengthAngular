@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     imports: [PasswordInputComponent, PasswordStrengthComponent, FormsModule, ReactiveFormsModule]
 })
 export class ComponentsComponent {
- passwordControl: FormControl = new FormControl();
+    passwordControl: FormControl = new FormControl();
+
     constructor(public passwordStrengthService: PasswordStrengthService) { }
 }

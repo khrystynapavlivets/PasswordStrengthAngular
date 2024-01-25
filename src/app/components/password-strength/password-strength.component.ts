@@ -14,22 +14,4 @@ export class PasswordStrengthComponent {
   @Input() passwordControl: FormControl = new FormControl();
 
   constructor(public service: PasswordStrengthService) { }
-
-  // get strengthClass(): string {
-  //   return this.service.getPasswordStrengthClass(
-  //     this.passwordControl.value
-  //   );
-  // }
-
-
-  // get strengthClass(): string {
-  //   console.log('Password:', this.passwordControl.value);
-  //   console.log('Is Empty:', this.service.isEmpty(this.passwordControl.value));
-  //   console.log('Is Weak:', this.service.isWeak(this.passwordControl.value));
-  //   console.log('Is Simple:', this.service.isSimple(this.passwordControl.value));
-  //   console.log('Is Medium:', this.service.isMedium(this.passwordControl.value));
-  //   console.log('Is Strong:', this.service.isStrong(this.passwordControl.value));
-
-  //   return this.service.getPasswordStrengthClass(this.passwordControl.value);
-  // }
 }
