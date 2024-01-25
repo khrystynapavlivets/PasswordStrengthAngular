@@ -27,9 +27,11 @@ export class PasswordStrengthService {
         /^[!"#£$%&'()*+,\-./:;<=>?@_`{}~]+$/.test(password))
     );
   }
+
   isMedium(password: string | null): boolean {
     return true;
   }
+
   isStrong(password: string | null): boolean {
     return !!password && password.length >= 8 &&
       /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?_`~])/.test(password);
@@ -41,7 +43,6 @@ export class PasswordStrengthService {
       case this.isSimple(password): return 'red-simple';
       case this.isWeak(password): return 'red';
       case this.isStrong(password): return 'green';
-      // case this.isStrong(password): return 'gray-medium';
       default: return 'gray-medium';
     }
   }
